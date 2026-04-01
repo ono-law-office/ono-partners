@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ono-law-office.github.io/ono-partners/sitemap.xml
