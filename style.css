@@ -920,54 +920,89 @@ a:hover { color: var(--accent); }
     .lang-toggle { right: 52px; font-size: 10px; }
 }
 
-/* ========== Publications Grid ========== */
-.publications-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+/* ========== Publications List ========== */
+.publications-list-new {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-.book-card {
-    background: var(--white);
-    border: 1px solid var(--border-light);
-    border-radius: 4px;
-    overflow: hidden;
-    transition: box-shadow 0.3s, transform 0.3s;
+.pub-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-light);
 }
 
-.book-card:hover {
-    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
+.pub-row:first-child {
+    border-top: 1px solid var(--border-light);
 }
 
-.book-img {
-    aspect-ratio: 3/4;
-    overflow: hidden;
-    background: var(--bg-alt);
+.pub-thumb {
+    flex-shrink: 0;
+    width: 72px;
 }
 
-.book-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.pub-thumb img {
+    width: 72px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-.book-info {
-    padding: 16px;
-}
-
-.book-info h3 {
+.pub-text h3 {
     font-family: var(--font-heading);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--navy);
     line-height: 1.6;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
 }
 
-.book-meta {
-    font-size: 11px;
+.pub-publisher {
+    font-size: 12px;
     color: var(--text-muted);
+}
+
+/* ========== Career Timeline ========== */
+.career-full {
+    margin-bottom: 0;
+}
+
+.career-timeline {
+    list-style: none;
+}
+
+.career-timeline li {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.7;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.career-timeline li:last-child {
+    border-bottom: none;
+}
+
+.career-timeline li::before {
+    display: none;
+}
+
+.career-year {
+    flex-shrink: 0;
+    width: 100px;
+    font-family: var(--font-en);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    padding-top: 1px;
 }
 
 /* ========== Awards Timeline ========== */
@@ -1123,17 +1158,7 @@ a:hover { color: var(--accent); }
 }
 
 /* ========== Responsive additions ========== */
-@media (max-width: 900px) {
-    .publications-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
-    .publications-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
 
     .seminar-item {
         flex-direction: column;
@@ -1155,8 +1180,7 @@ a:hover { color: var(--accent); }
 }
 
 @media (max-width: 480px) {
-    .publications-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
+    .pub-thumb { width: 56px; }
+    .pub-thumb img { width: 56px; }
+    .career-year { width: 80px; font-size: 11px; }
 }
