@@ -3,12 +3,24 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ono-law-office.github.io/ono-partners/</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://ono-law-office.github.io/ono-partners/images/profile-new.jpg</image:loc>
       <image:title>小野傑 弁護士 プロフィール写真</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://ono-law-office.github.io/ono-partners/awards.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ono-law-office.github.io/ono-partners/publications.html</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
